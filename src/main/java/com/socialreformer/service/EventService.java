@@ -1,10 +1,14 @@
 package main.java.com.socialreformer.service;
 
-import java.util.List;
+import main.java.com.socialreformer.model.Events;
+import main.java.com.socialreformer.model.UserEvents;
 
 
 
 public interface EventService{
-/*	public List<Event> getEventList();*/
+	
+	public void createEvent(Events event);
+	public void joinEvent(UserEvents userEvents);
+	public long numberOfEventParticipants(Integer eventId);
 
 }
