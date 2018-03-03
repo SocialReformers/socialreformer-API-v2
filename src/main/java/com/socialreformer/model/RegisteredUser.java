@@ -25,7 +25,7 @@ public class RegisteredUser {
 	private String password;
 	
 	@Column(name="CONTACT_NO")
-	private String contactNo;
+	private String phoneNo;
 
 	public Integer getId() {
 		return id;
@@ -67,13 +67,14 @@ public class RegisteredUser {
 		this.password = password;
 	}
 
-	public String getContactNo() {
-		return contactNo;
+	public String getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setContactNo(String contactNo) {
-		this.contactNo = contactNo;
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
+
 	
 	
 	
