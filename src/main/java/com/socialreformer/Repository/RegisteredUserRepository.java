@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import main.java.com.socialreformer.model.RegisteredUser;
 
 @Repository
-public interface RegisteredUserRepository extends JpaRepository<RegisteredUser,Integer>,RegisteredUserRepositotyCustom{
+public interface RegisteredUserRepository extends JpaRepository<RegisteredUser,Integer>{
 
 }

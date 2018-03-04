@@ -27,7 +27,7 @@ public class EventRestController {
 	}
 
 	@PostMapping("/join/userevent")
-	public void createComplaint(@Valid @RequestBody UserEvents userEvent) {
+	public  void createComplaint(@Valid @RequestBody UserEvents userEvent) {
 		eventService.joinEvent(userEvent);
 	}
 

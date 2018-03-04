@@ -11,20 +11,21 @@ import javax.persistence.Table;
 @Table(name = "REGISTERED_USER")
 public class RegisteredUser {
 
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id; 
-	
-	private String name;
-	
-	private String email;
-	
-	private String locality;
-	
+	private Integer id;
+
+	@Column(name = "name")
+	private String namePerson;
+
+	@Column(name = "email")
+	private String emailAddr;
+	@Column(name = "locality")
+	private String eventVenue;
+
 	private String password;
-	
-	@Column(name="CONTACT_NO")
+
+	@Column(name = "CONTACT_NO")
 	private String phoneNo;
 
 	public Integer getId() {
@@ -35,28 +36,28 @@ public class RegisteredUser {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNamePerson() {
+		return namePerson;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNamePerson(String namePerson) {
+		this.namePerson = namePerson;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailAddr() {
+		return emailAddr;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailAddr(String emailAddr) {
+		this.emailAddr = emailAddr;
 	}
 
-	public String getLocality() {
-		return locality;
+	public String getEventVenue() {
+		return eventVenue;
 	}
 
-	public void setLocality(String locality) {
-		this.locality = locality;
+	public void setEventVenue(String eventVenue) {
+		this.eventVenue = eventVenue;
 	}
 
 	public String getPassword() {
@@ -75,8 +76,4 @@ public class RegisteredUser {
 		this.phoneNo = phoneNo;
 	}
 
-	
-	
-	
-	
 }
