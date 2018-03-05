@@ -13,9 +13,12 @@ public class RegisterUserServiceImpl implements RegisterUserService {
 	@Resource
 	RegisteredUserRepository registerUserRepository;
 
-	public void registerUser(RegisteredUser user){
-		registerUserRepository.save(user);
+	public RegisteredUser registerUser(RegisteredUser user){
+		return registerUserRepository.save(user);
 	}
-		
+	
+	public long autheticateUser(String emailAddr,String password){
+		return registerUserRepository.countByEmailAddrAndPassword(emailAddr, password);		
+	}
 	
 }

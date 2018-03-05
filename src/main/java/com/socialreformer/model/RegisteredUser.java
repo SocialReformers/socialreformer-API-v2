@@ -2,6 +2,7 @@ package main.java.com.socialreformer.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,6 +28,7 @@ public class RegisteredUser {
 
 	@Column(name = "CONTACT_NO")
 	private String phoneNo;
+
 
 	public Integer getId() {
 		return id;

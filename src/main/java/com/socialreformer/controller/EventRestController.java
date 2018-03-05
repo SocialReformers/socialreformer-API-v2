@@ -1,5 +1,7 @@
 package main.java.com.socialreformer.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,18 +24,24 @@ public class EventRestController {
 	EventService eventService;
 
 	@PostMapping("/createEvent/events")
-	public void createComplaint(@Valid @RequestBody Events event) {
-		eventService.createEvent(event);
+	public Events createEvents(@Valid @RequestBody Events event) {
+		return eventService.createEvent(event);
 	}
 
 	@PostMapping("/join/userevent")
-	public  void createComplaint(@Valid @RequestBody UserEvents userEvent) {
-		eventService.joinEvent(userEvent);
+	public  UserEvents createComplaint(@Valid @RequestBody UserEvents userEvent) {
+		return eventService.joinEvent(userEvent);
 	}
 
 	@RequestMapping(value="/participants",method=RequestMethod.GET)
 	public long noOfParticipants(@RequestParam(value="eventId",required=true) Integer eventId) {
 		return eventService.numberOfEventParticipants(eventId);
 	}
-
+	@RequestMapping(value="/nearYou",method=RequestMethod.GET)
+	public List<Events> retrieveEventsNearYou(@RequestParam(value="city",required=true) String city) {
+		List<Events> li=eventService.retrieveEventsNearYou(city);
+		return li;
+	}
+	
+	
 }
