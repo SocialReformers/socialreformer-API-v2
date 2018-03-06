@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,9 @@ public class ComplaintServiceImpl implements ComplaintService{
 	private ComplaintsRepository complaintRepository;
 	@Resource
 	private SocialOrganizationsRepository socialOrganizationsRepository;
+	
+	@Autowired
+	private EmailSendService emailSendService;
 
     @Transactional(readOnly=true)
 	public List<Cause> retrieveCause(){
@@ -31,6 +35,7 @@ public class ComplaintServiceImpl implements ComplaintService{
 	
 	public void createComplaints(Complaints complaint){
 		complaintRepository.save(complaint);
+		emailSendService.getJavaMailSender();
 	}
     @Transactional(readOnly=true)
 	@Override
