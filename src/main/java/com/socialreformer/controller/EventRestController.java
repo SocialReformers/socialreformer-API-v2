@@ -38,8 +38,8 @@ public class EventRestController {
 		return eventService.numberOfEventParticipants(eventId);
 	}
 	@RequestMapping(value="/nearYou",method=RequestMethod.GET)
-	public List<Events> retrieveEventsNearYou(@RequestParam(value="city",required=true) String city) {
-		List<Events> li=eventService.retrieveEventsNearYou(city);
+	public List<Events> retrieveEventsNearYou(/*@RequestParam(value="city",required=true) String city*/) {
+		List<Events> li=eventService.retrieveEventsNearYou();
 		return li;
 	}
 	

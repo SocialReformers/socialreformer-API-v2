@@ -31,7 +31,7 @@ public class EventServiceImpl implements EventService{
 		return userEventRepository.countByEventId(eventId);
 	}
 	
-	public List<Events> retrieveEventsNearYou(String city){
-		return eventRepository.searchByCityAndEventDate(city);
+	public List<Events> retrieveEventsNearYou(/*String city*/){
+		return eventRepository.searchByCityAndEventDate();
 	}
 }

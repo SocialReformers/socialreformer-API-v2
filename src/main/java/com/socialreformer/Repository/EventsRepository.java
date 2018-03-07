@@ -10,6 +10,6 @@ import com.socialreformer.model.Events;
 
 public interface EventsRepository extends JpaRepository<Events, Integer>{
 	
-	@Query("Select event from Events event where event.city=:city")
-	public List<Events> searchByCityAndEventDate(@Param("city") String city);
+	@Query("Select event from Events event ")
+	public List<Events> searchByCityAndEventDate(/*@Param("city") String city*/);
 }
