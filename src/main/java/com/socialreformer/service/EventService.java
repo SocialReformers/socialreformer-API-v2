@@ -1,9 +1,9 @@
-package main.java.com.socialreformer.service;
+package com.socialreformer.service;
 
 import java.util.List;
 
-import main.java.com.socialreformer.model.Events;
-import main.java.com.socialreformer.model.UserEvents;
+import com.socialreformer.model.Events;
+import com.socialreformer.model.UserEvents;
 
 
 

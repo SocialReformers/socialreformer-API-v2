@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.controller;
+package com.socialreformer.controller;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import main.java.com.socialreformer.model.Events;
-import main.java.com.socialreformer.model.UserEvents;
-import main.java.com.socialreformer.service.EventService;
+import com.socialreformer.model.Events;
+import com.socialreformer.model.UserEvents;
+import com.socialreformer.service.EventService;
 
 @RestController
 @RequestMapping(value="/socialReformer/events")

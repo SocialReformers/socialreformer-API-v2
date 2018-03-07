@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.controller;
+package com.socialreformer.controller;
 
 import javax.validation.Valid;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import main.java.com.socialreformer.Repository.RegisteredUserRepository;
-import main.java.com.socialreformer.model.Events;
-import main.java.com.socialreformer.model.RegisteredUser;
-import main.java.com.socialreformer.service.RegisterUserService;
+import com.socialreformer.Repository.RegisteredUserRepository;
+import com.socialreformer.model.Events;
+import com.socialreformer.model.RegisteredUser;
+import com.socialreformer.service.RegisterUserService;
 
 @RestController
 @RequestMapping(value = "/socialReformer/register")

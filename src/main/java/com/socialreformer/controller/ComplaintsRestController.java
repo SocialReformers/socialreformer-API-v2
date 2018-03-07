@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.controller;
+package com.socialreformer.controller;
 
 import java.util.List;
 
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import main.java.com.socialreformer.model.Cause;
-import main.java.com.socialreformer.model.Complaints;
-import main.java.com.socialreformer.model.RegisteredUser;
-import main.java.com.socialreformer.model.SocialOrganizations;
-import main.java.com.socialreformer.service.ComplaintService;
+import com.socialreformer.model.Cause;
+import com.socialreformer.model.Complaints;
+import com.socialreformer.model.RegisteredUser;
+import com.socialreformer.model.SocialOrganizations;
+import com.socialreformer.service.ComplaintService;
 
 @RestController
 @RequestMapping(value = "/socialReformer/complaint")

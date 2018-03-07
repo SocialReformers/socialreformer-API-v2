@@ -1,4 +1,4 @@
-package main.java.com.socialreformer;
+package com.socialreformer;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

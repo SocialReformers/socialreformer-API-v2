@@ -1,10 +1,10 @@
-package main.java.com.socialreformer.service;
+package com.socialreformer.service;
 
 import java.util.List;
 
-import main.java.com.socialreformer.model.Cause;
-import main.java.com.socialreformer.model.Complaints;
-import main.java.com.socialreformer.model.SocialOrganizations;
+import com.socialreformer.model.Cause;
+import com.socialreformer.model.Complaints;
+import com.socialreformer.model.SocialOrganizations;
 
 public interface ComplaintService {
 	public List<Cause> retrieveCause();

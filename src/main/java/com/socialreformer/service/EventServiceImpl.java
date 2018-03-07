@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.service;
+package com.socialreformer.service;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import main.java.com.socialreformer.Repository.EventsRepository;
-import main.java.com.socialreformer.Repository.UserEventsRepository;
-import main.java.com.socialreformer.model.Events;
-import main.java.com.socialreformer.model.UserEvents;
+import com.socialreformer.Repository.EventsRepository;
+import com.socialreformer.Repository.UserEventsRepository;
+import com.socialreformer.model.Events;
+import com.socialreformer.model.UserEvents;
 
 @Service
 public class EventServiceImpl implements EventService{

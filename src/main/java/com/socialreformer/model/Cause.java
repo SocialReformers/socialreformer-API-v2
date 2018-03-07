@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.model;
+package com.socialreformer.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

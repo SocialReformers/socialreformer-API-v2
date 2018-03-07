@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.service;
+package com.socialreformer.service;
 
 import java.util.List;
 
@@ -9,12 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import main.java.com.socialreformer.Repository.CauseRepository;
-import main.java.com.socialreformer.Repository.ComplaintsRepository;
-import main.java.com.socialreformer.Repository.SocialOrganizationsRepository;
-import main.java.com.socialreformer.model.Cause;
-import main.java.com.socialreformer.model.Complaints;
-import main.java.com.socialreformer.model.SocialOrganizations;
+import com.socialreformer.Repository.CauseRepository;
+import com.socialreformer.Repository.ComplaintsRepository;
+import com.socialreformer.Repository.SocialOrganizationsRepository;
+import com.socialreformer.model.Cause;
+import com.socialreformer.model.Complaints;
+import com.socialreformer.model.SocialOrganizations;
 
 @Service
 public class ComplaintServiceImpl implements ComplaintService{

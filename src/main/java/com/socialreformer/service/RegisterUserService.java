@@ -1,6 +1,6 @@
-package main.java.com.socialreformer.service;
+package com.socialreformer.service;
 
-import main.java.com.socialreformer.model.RegisteredUser;
+import com.socialreformer.model.RegisteredUser;
 
 public interface RegisterUserService {
 

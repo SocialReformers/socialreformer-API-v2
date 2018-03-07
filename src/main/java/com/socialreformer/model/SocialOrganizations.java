@@ -1,4 +1,4 @@
-package main.java.com.socialreformer.model;
+package com.socialreformer.model;
 
 import java.util.Date;
 
