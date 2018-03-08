@@ -13,4 +13,5 @@ public interface EventService{
 	public UserEvents joinEvent(UserEvents userEvents);
 	public long numberOfEventParticipants(Integer eventId);
 	public List<Events> retrieveEventsNearYou(/*String city*/);
+	public Events retrieveEventDetails(Integer id);
 }

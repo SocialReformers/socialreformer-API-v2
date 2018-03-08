@@ -43,5 +43,10 @@ public class EventRestController {
 		return li;
 	}
 	
+	@RequestMapping(value="/eventDetails",method=RequestMethod.GET)
+	public Events retrieveEventDetails(@RequestParam(value="eventId",required=true) Integer id) {		
+		return eventService.retrieveEventDetails(id);
+	}
+	
 	
 }
