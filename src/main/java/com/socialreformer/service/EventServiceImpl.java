@@ -34,4 +34,7 @@ public class EventServiceImpl implements EventService{
 	public List<Events> retrieveEventsNearYou(/*String city*/){
 		return eventRepository.searchByCityAndEventDate();
 	}
+	public Events retrieveEventDetails(Integer id){
+		return eventRepository.findOne(id);
+	}
 }

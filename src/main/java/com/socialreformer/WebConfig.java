@@ -15,7 +15,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addCorsMappings(CorsRegistry registry){
 		registry.addMapping("/socialReformer/**")
-		.allowedOrigins("http://localhost:8100");//.allowedOrigins("http://10.83.8.12:8100");
+		.allowedOrigins("http://localhost:8100").allowedOrigins("http://10.83.8.12:8100");
+		
 	}	
 	
 	@Override
