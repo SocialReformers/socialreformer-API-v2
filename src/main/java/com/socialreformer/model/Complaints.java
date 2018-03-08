@@ -27,6 +27,8 @@ public class Complaints {
 	
 	private String description;
 	
+
+	
 	public Integer getId() {
 		return id;
 	}
@@ -66,6 +68,6 @@ public class Complaints {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
+	
 	
 }
