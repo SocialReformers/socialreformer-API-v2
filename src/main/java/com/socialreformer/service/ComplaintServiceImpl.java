@@ -15,7 +15,8 @@ import com.socialreformer.Repository.SocialOrganizationsRepository;
 import com.socialreformer.model.Cause;
 import com.socialreformer.model.Complaints;
 import com.socialreformer.model.SocialOrganizations;
-
+import com.socialreformer.model.DTO.ComplaintDetailsDTO;
+import org.dozer.DozerBeanMapper;
 @Service
 public class ComplaintServiceImpl implements ComplaintService{
 	@Resource
@@ -28,14 +29,16 @@ public class ComplaintServiceImpl implements ComplaintService{
 	@Autowired
 	private EmailSendService emailSendService;
 
+
     @Transactional(readOnly=true)
 	public List<Cause> retrieveCause(){
 		return causeRepository.findAll();
 	}
 	
-	public void createComplaints(Complaints complaint){
-		complaintRepository.save(complaint);
-		emailSendService.getJavaMailSender();
+	public void createComplaints(ComplaintDetailsDTO complaintDTO){
+		 Complaints complaints = new DozerBeanMapper().map(complaintDTO, Complaints.class);
+		complaintRepository.save(complaints);
+		emailSendService.getJavaMailSender(complaintDTO);
 	}
     @Transactional(readOnly=true)
 	@Override

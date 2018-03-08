@@ -17,6 +17,7 @@ import com.socialreformer.model.Cause;
 import com.socialreformer.model.Complaints;
 import com.socialreformer.model.RegisteredUser;
 import com.socialreformer.model.SocialOrganizations;
+import com.socialreformer.model.DTO.ComplaintDetailsDTO;
 import com.socialreformer.service.ComplaintService;
 
 @RestController
@@ -36,11 +37,14 @@ public class ComplaintsRestController {
 	}
 
 	@PostMapping("/complaint")
-	public void createComplaint(@Valid @RequestBody Complaints complaint){
-		 complaintService.createComplaints(complaint);
+	public void createComplaint(@Valid @RequestBody ComplaintDetailsDTO complaintDTO){
+		 complaintService.createComplaints(complaintDTO);
 	}
 	
 	
-	
+	/*@RequestMapping(value="/complaint",method = RequestMethod.GET)
+	public void createComplaints(@RequestParam String cause,@RequestParam String city){
+		 complaintService.createComplaints();
+	}*/
 
 }

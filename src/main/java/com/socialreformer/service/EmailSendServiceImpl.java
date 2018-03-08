@@ -2,27 +2,26 @@ package com.socialreformer.service;
 
 import java.util.Properties;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Component;
 
+import com.socialreformer.model.DTO.ComplaintDetailsDTO;
+
 @Component
 public class EmailSendServiceImpl implements EmailSendService {
-	
-	public JavaMailSender getJavaMailSender() {
-	    JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-	    mailSender.setHost("smtp.gmail.com");
-	    mailSender.setPort(587);
-	     
-	    mailSender.setUsername("my.gmail@gmail.com");
-	    mailSender.setPassword("password");
-	     
-	    Properties props = mailSender.getJavaMailProperties();
-	    props.put("mail.transport.protocol", "smtp");
-	    props.put("mail.smtp.auth", "true");
-	    props.put("mail.smtp.starttls.enable", "true");
-	    props.put("mail.debug", "true");
-	     
-	    return mailSender;
+	   @Autowired
+	    public JavaMailSender emailSender;
+	public boolean getJavaMailSender(ComplaintDetailsDTO complaintDTO) {
+	 
+	    SimpleMailMessage message= new SimpleMailMessage();
+	    message.setTo(complaintDTO.getTomailId());
+	    message.setSubject(complaintDTO.getType());
+	    message.setText("Hi"+"<br>"+complaintDTO.getDescription());
+	    emailSender.send(message);
+	    return true;
+	  
 	}
 }
