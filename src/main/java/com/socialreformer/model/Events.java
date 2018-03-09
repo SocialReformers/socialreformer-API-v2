@@ -1,6 +1,6 @@
 package com.socialreformer.model;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -16,6 +16,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "EVENTS")
@@ -30,7 +32,8 @@ public class Events {
 
 	private String description;
 
-	/*@Temporal(TemporalType.DATE)*/
+	@Temporal(TemporalType.DATE)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd") 
 	@Column(name = "EVENT_DATE")
 	private Date eventDate;
 
@@ -51,7 +54,7 @@ public class Events {
 	@Column(name = "NOTIFY_SENT")
 	private String notificationSent;
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "event")
-	@JsonBackReference
+	@JsonManagedReference 
 	private Set<UserEvents> userEvents;
 
 	public Events(){

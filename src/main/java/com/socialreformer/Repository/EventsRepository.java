@@ -10,6 +10,6 @@ import com.socialreformer.model.Events;
 
 public interface EventsRepository extends JpaRepository<Events, Integer>{
 	
-	@Query("Select event from Events event ")
+	@Query("Select event from Events event where event.eventDate > CURRENT_DATE ORDER BY event.eventDate")
 	public List<Events> searchByCityAndEventDate(/*@Param("city") String city*/);
 }
