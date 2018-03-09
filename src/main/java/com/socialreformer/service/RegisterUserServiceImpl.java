@@ -21,4 +21,7 @@ public class RegisterUserServiceImpl implements RegisterUserService {
 		return registerUserRepository.countByEmailAddrAndPassword(emailAddr, password);		
 	}
 	
+	public Integer retrievRegisteredUserByMail(String email){
+		return registerUserRepository.findByEmailAddr(email);
+	}
 }
