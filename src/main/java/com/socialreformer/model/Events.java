@@ -44,6 +44,9 @@ public class Events {
 	private String state;
 
 	private String details;
+	
+	@Column(name = "CONTACT_NO")
+	private String contactNo;
 
 	@Column(name = "NOTIFY_SENT")
 	private String notificationSent;
@@ -141,6 +144,14 @@ public class Events {
 
 	public void setUserEvents(Set<UserEvents> userEvents) {
 		this.userEvents = userEvents;
+	}
+
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
 	}
 	
 }

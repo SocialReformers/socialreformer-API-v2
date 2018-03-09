@@ -8,4 +8,8 @@ public interface RegisterUserService {
 	
 	public long autheticateUser(String emailAddr,String password);
 
+	public Integer retrievRegisteredUserByMail(String email);
+	
+
+
 }
