@@ -28,6 +28,7 @@ public class ComplaintsRestController {
 
 	@RequestMapping(value="/cause",method = RequestMethod.GET)
 	public List<Cause> retrieveCause(){
+		System.out.println("get method cause");
 		return complaintService.retrieveCause();
 	}
 	
