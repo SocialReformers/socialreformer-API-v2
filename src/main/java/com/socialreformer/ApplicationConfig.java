@@ -25,11 +25,14 @@ public class ApplicationConfig {
 	        String username = dbUri.getUserInfo().split(":")[0];
 	        String password = dbUri.getUserInfo().split(":")[1];
 	        String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
-
+            System.out.println("URL:"+ dbUrl);
 	        BasicDataSource basicDataSource = new BasicDataSource();
 	        basicDataSource.setUrl(dbUrl);
 	        basicDataSource.setUsername(username);
+	        System.out.println("UNAME:"+ basicDataSource.getUsername() );
+	        
 	        basicDataSource.setPassword(password);
+	        System.out.println("URL pass:"+ basicDataSource.getPassword());
 
 	        return basicDataSource;
 	    }
