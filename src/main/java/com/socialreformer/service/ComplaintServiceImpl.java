@@ -16,6 +16,9 @@ import com.socialreformer.model.Cause;
 import com.socialreformer.model.Complaints;
 import com.socialreformer.model.SocialOrganizations;
 import com.socialreformer.model.DTO.ComplaintDetailsDTO;
+
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 import org.dozer.DozerBeanMapper;
 @Service
 public class ComplaintServiceImpl implements ComplaintService{
@@ -32,6 +35,7 @@ public class ComplaintServiceImpl implements ComplaintService{
 
     @Transactional(readOnly=true)
 	public List<Cause> retrieveCause(){
+    	System.out.println("Inside complaint service");
 		return causeRepository.findAll();
 	}
 	

@@ -47,7 +47,6 @@ public class EventRestController {
 	public Events retrieveEventDetails(@RequestParam(value="eventId",required=true) Integer id) {		
 		return eventService.retrieveEventDetails(id);
 	}
-	
-	
+
 	
 }
