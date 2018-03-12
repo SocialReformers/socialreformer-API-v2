@@ -18,7 +18,7 @@ public class ApplicationConfig {
 	}*/
 	
 
-	    @Bean
+	 /*   @Bean
 	    public BasicDataSource dataSource() throws URISyntaxException {
 	        URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
 
@@ -36,6 +36,6 @@ public class ApplicationConfig {
 
 	        return basicDataSource;
 	    }
-	
+	*/
 
 }
